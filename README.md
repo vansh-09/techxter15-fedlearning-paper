@@ -109,6 +109,30 @@ Our framework achieves:
 
 ---
 
+## Architecture Diagram
+
+Below is the visual representation of our proposed **Hierarchical FL-SL Architecture**:
+
+![Hierarchical FL-SL Architecture](architecture.png)
+
+**Figure 1:** Three-tier architecture showing Edge Swarms (Tier 1), Regional Federators (Tier 2), and Global Meta-Learner (Tier 3). <br>
+Blockchain consensus enables peer-to-peer coordination without central servers.
+
+### Component Details
+
+| Tier | Component | Function |
+|------|-----------|----------|
+| **Tier 1** | Edge Swarms | Local device clusters (10-100 devices) with blockchain consensus and sub-100ms latency |
+| **Tier 2** | Regional Federators | Aggregate swarm-level models using FedSim clustering for statistical heterogeneity |
+| **Tier 3** | Global Meta-Learner | Meta-learning layer (MAML/Meta-SGD) enabling cross-domain generalization for AGI |
+
+**Key Innovations:**
+- **TORR Protocol**: Byzantine fault tolerance through reliable node categorization
+- **Dynamic Leader Election**: Prevents single points of failure via rotating aggregators
+- **Hierarchical Compression**: 60-80% model size reduction with <1% accuracy loss
+
+---
+
 ## Key Concepts Explained
 
 ### Non-IID Data
